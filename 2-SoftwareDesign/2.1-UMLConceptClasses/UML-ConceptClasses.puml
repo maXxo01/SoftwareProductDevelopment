@@ -1,0 +1,32 @@
+@startuml
+
+class User {
+  name
+  phoneNumber
+}
+
+class Location {
+  latitude
+  longitude
+}
+
+class EmergencyAlert {
+  activationTime
+}
+
+class Notification {
+  message
+  time
+}
+
+class EmergencyContact {
+  contactName
+  contactPhone
+}
+
+User "1" -- "many" Location : has
+User "1" -- "many" EmergencyContact : defines
+User "1" -- "many" EmergencyAlert : triggers
+EmergencyAlert "1" -- "many" Notification : generates
+
+@enduml
