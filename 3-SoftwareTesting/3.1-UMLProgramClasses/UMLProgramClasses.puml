@@ -1,0 +1,11 @@
+@startuml
+
+class User {
+  - id : int
+  - login : string
+  - password : string
+
+  + register(login : string, password : string) : int
+}
+
+@enduml
